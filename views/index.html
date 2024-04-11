@@ -86,10 +86,12 @@
       let URL = $("form:first input:last").val();
       let descripcion = $("form:first textarea").val();
       const { data } = await axios.post("/post", {
+        
         usuario,
         URL,
         descripcion,
       });
+      console.log(data)
       $("#creado").removeClass("d-none");
       getPosts();
     });
